@@ -1,0 +1,101 @@
+<div class="level-block">
+
+  <div class="copy">
+    あなたのレベルにあった本が選べます。
+  </div>
+
+  <% unless @user_language.empty? %>
+  <div class="inner clearfix">
+    <h2>
+      あなたのスキルレベル
+    </h2>
+
+    <% languages.each_with_index do |language, num| %>
+    <div class="box">
+      <div class="language-name">
+        <%=language_name(@user_language[num]['language_id'])%>
+      </div>
+      <div class="language-level">
+        <%=levels[@user_language[num]['level']]%>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <% end %>
+
+</div>
+
+<div class="contents contents-heght">
+
+  <h1>
+    <%= @h1 %> -
+    <%= @language_name %> -
+  </h1>
+
+  <div class="sidebar">
+    <a href="/books" class="books-btn">All Books</a>
+    <a href="/" class="books-btn btn-on">あなたにおすすめ</a>
+
+    <div class="languages">
+      <% languages.each_with_index do |language, num| %>
+      <a href="/language/<%= language['id'] %>">
+        <%=language_name(@user_language[num]['language_id'])%>
+
+        <% unless @user_language[num]['level'] == 0 %>
+        <span>
+          <%=levels[@user_language[num]['level']]%>
+        </span>
+        <% end %>
+      </a>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="books-list">
+
+    <% if @recommended_books.empty? %>
+    <div class="book">
+      <div class="no-books">
+        <i class="far fa-dizzy"></i>No books.
+      </div>
+    </div>
+    <% end %>
+
+    <% @recommended_books.each do |book| %>
+
+    <div class="book clearfix">
+
+      <% unless book['image'].nil? %>
+      <div class="img">
+        <a href="<%= book['link'] %>" target="_blank">
+          <img src="/image/books/<%= book['id'] %>/<%= book['image'] %>" alt="thumbnail">
+        </a>
+      </div>
+      <% end %>
+
+      <div class="content">
+        <div class="language-name">
+          <%= language_name(book['language_id']) %>
+          <%= levels[book['level']] %>
+        </div>
+        <div class="title">
+          <a href="<%= book['link'] %>" target="_blank">
+            <%= book['title'] %>
+          </a>
+        </div>
+        <div class="nickname">
+          <span>
+            <%= user_nickname(book['user_id']) %></span> さんからのおすすめ！
+        </div>
+        <div>
+          <%= nl2br(book['comment']) %>
+        </div>
+      </div>
+
+    </div>
+
+    <% end %>
+
+  </div>
+
+</div>

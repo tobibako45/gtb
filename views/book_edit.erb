@@ -1,0 +1,60 @@
+<div class="contents">
+
+  <h1>
+    本の編集
+  </h1>
+
+  <div class="book-form">
+
+    <form action="/book_edit" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="_method" value="put">
+      <input type="hidden" name="id" value="<%= @books[0]['id'] %>">
+      <input type="hidden" name="user_id" value="<%= @books[0]['user_id'] %>">
+
+      <label>タイトル</label>
+      <input type="text" class="form-control mb-2" name="title" value="<%= @books[0]['title'] %>" required>
+
+      <label>リンク</label>
+      <textarea class="form-control mb-2" name="link" rows="4"><%= @books[0]['link'] %></textarea>
+
+      <label>言語</label>
+      <select class="form-control mb-2" name="language_id">
+        <% languages.each_with_index do |language, i| %>
+
+        <%
+          selected = nil
+          selected = ' selected' if i+1 == @books[0]['language_id']
+        %>
+        <option value="<%= i+1 %>" <%=selected%>>
+          <%= language['name'] %>
+        </option>
+
+        <% end %>
+      </select>
+
+      <label>レベル</label>
+      <select class="form-control mb-2" name="level">
+        <% (1...levels.count).each do |i| %>
+
+        <% level_selected = ' selected' if i == @books[0]['level'] %>
+        <option value="<%=i%>" <%=level_selected %>>
+          <%=levels[i]%>
+        </option>
+        <% end %>
+      </select>
+
+      <label>コメント</label>
+      <textarea class="form-control mb-2" name="comment" rows="8"><%= @books[0]['comment'] %></textarea>
+      <label>画像</label>
+      <% if @books[0]['image'] %>
+      <p>
+        <img src="/image/books/<%= @books[0]['id'] %>/<%= @books[0]['image'] %>" alt="" width="200">
+      </p>
+      <% end %>
+      <p>
+        <input type="file" class="mb-4" name="file" multiple>
+      </p>
+      <button type="submit" class="btn btn-color">Submit</button>
+    </form>
+  </div>
+</div>

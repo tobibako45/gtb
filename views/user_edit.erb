@@ -1,0 +1,36 @@
+<div class="contents">
+  <h1>
+    プロフィール編集
+  </h1>
+  <div class="user-form">
+    <div class="name">
+      アカウント名
+      <span>
+        <%= @user_data[0]['name'] %>
+      </span>
+    </div>
+    <form action="/user_edit" method="post" enctype="multipart/form-data">
+      <label>プロフィール画像</label>
+
+      <% if @user_data[0]['image'] %>
+      <div class="thumbnail">
+        <img src="/image/users/<%= @user_data[0]['id'] %>/<%= @user_data[0]['image'] %>" alt="thumbnail">
+      </div>
+      <% end %>
+      <p>
+        <input type="file" class="mb-4" name="file" multiple>
+      </p>
+
+      <input type="hidden" name="_method" value="put">
+      <input type="hidden" name="user_id" value="<%= @user_data[0]['id'] %>">
+      <label>ニックネーム</label>
+      <input type="text" class="form-control mb-2" name="nickname" value="<%= @user_data[0]['nickname'] %>">
+      <label>パスワード</label>
+      <input type="password" class="form-control mb-2" name="password" value="<%= @user_data[0]['password'] %>">
+      <label>コメント</label>
+      <textarea class="form-control mb-2" name="comment" rows=12"><%= @user_data[0]['comment'] %></textarea>
+
+      <button type="submit" class="btn btn-color">Submit</button>
+    </form>
+  </div>
+</div>

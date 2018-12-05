@@ -1,0 +1,23 @@
+<div class="col-12 mt-5">
+  <div class="signup mx-auto">
+
+    <h1>
+      Sign Up
+    </h1>
+
+    <p class="messege">
+      <%= flash[:sign] %>
+    </p>
+
+    <form action="/signup" method="post">
+      <label>アカウント名<span>*</span></label>
+      <input type="text" class="form-control mb-2" name="name" placeholder="" required>
+      <label>ニックネーム<span>*</span></label>
+      <input type="text" class="form-control mb-2" name="nickname" placeholder="" required>
+      <label>パスワード<span>*</span></label>
+      <input type="password" class="form-control mb-4" name="password" required>
+      <button type="submit" class="btn btn-color">Create my account</button>
+    </form>
+
+  </div>
+</div>

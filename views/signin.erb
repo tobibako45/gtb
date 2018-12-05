@@ -1,0 +1,32 @@
+<div class="signin row">
+  <div class="content col-lg-8">
+    <h1>
+      良い技術書とは、<br>自分のレベルに合った本である。
+    </h1>
+    一口に技術書と言っても中身は初心者～上級者向けまで様々です。<br>
+    自分に合っている技術書とは、自分が学びたいことに関して、自分の実力で理解できる難易度の技術書です。<br>
+    まずは自分のレベルに合っている技術書を探しましょう。
+  </div>
+
+  <div class="login col-lg-4">
+
+    <div class="title">
+      Login
+    </div>
+
+    <p class="messege">
+      <%= flash[:sign] %>
+    </p>
+
+    <form action="/signin" method="post">
+      <label>アカウント名</label>
+      <input type="text" class="form-control mb-4" name="name" required>
+      <label>パスワード</label>
+      <input type="password" class="form-control mb-4" name="password" required>
+      <button type="submit" class="btn btn-color">Login</button>
+    </form>
+
+    <a href="/signup">新規登録はこちら</a>
+
+  </div>
+</div>

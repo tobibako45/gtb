@@ -1,0 +1,705 @@
+html {
+  min-height: 100%;
+  margin-bottom: -80px;
+  position: relative;
+}
+
+body {
+  padding-top: 60px;
+  margin-bottom: 5em;
+  font-family: brandongrotesque-regular, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.01em !important;
+  color: #00b7b5 !important;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+a {
+  color: #00265d !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: #00b7b5 !important;
+}
+
+label {
+  margin-bottom: 0 !important;
+}
+
+button {
+  width: 100%;
+}
+
+h1 {
+  font-weight: bold !important;
+  text-align: center;
+  margin-bottom: 40px !important;
+  color: #00265d !important;
+}
+
+.flash {
+  font-weight: bold !important;
+  text-align: center;
+  font-size: 22px;
+  position: absolute;
+  left: 10px;
+  top: 75px;
+  z-index: 1031;
+}
+
+.fadeout {
+  animation: fadeOut 5s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.navbar {
+  padding: 0 !important;
+  padding-left: 20px !important;
+  height: 60px;
+}
+
+.navbar-dark .navbar-brand {
+  color: white !important;
+  font-size: 30px;
+  padding: 0 !important;
+}
+
+nav {
+  background-color: #0a275a !important;
+  font-weight: bold;
+  position: relative;
+}
+
+nav .login {
+  position: absolute;
+  right: 10px;
+  font-size: 1rem;
+}
+
+nav .login a {
+  color: white !important;
+  font-size: 18px !important;
+  display: block;
+  float: left;
+}
+
+nav .login a:hover {
+  text-decoration: none !important;
+  color: #00b7b5 !important;
+}
+
+nav .login .btn {
+  color: white !important;
+  padding: 2px 15px 4px;
+  margin-left: 15px;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+nav .login .btn:hover {
+  text-decoration: none !important;
+  color: #00b7b5 !important;
+  background: white;
+}
+
+nav .login span {
+  font-size: 22px;
+}
+
+nav .login .header-thumbnail {
+  margin-right: 10px;
+  float: left;
+}
+
+nav .login .header-thumbnail img {
+  width: 35px;
+  border-radius: 50%;
+  min-height: 35px;
+  border: 1px solid white;
+}
+
+nav .login .nickname {
+  float: left;
+  padding-top: 5px;
+}
+
+main {
+  position: relative;
+  margin-bottom: 200px;
+}
+
+main .icons {
+  position: absolute;
+  top: -45px;
+  right: 10px;
+}
+
+main .icons i {
+  margin-left: 15px;
+  color: #00265d;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  background-color: #0a275a;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  height: 80px;
+}
+
+footer .icons {
+  padding-top: 25px;
+}
+
+footer .icons i {
+  margin-right: 30px;
+}
+
+.contents {
+  width: 850px;
+  margin: 60px auto;
+  position: relative;
+}
+
+.contents-heght {
+  min-height: 1300px !important;
+}
+
+.sidebar {
+  width: 150px;
+  position: absolute;
+  right: -200px;
+  top: 0;
+  top: 90px;
+}
+
+.sidebar .books-btn {
+  display: block;
+  color: #00265d !important;
+  border: 2px solid #00265d;
+  box-sizing: border-box;
+  padding: 5px 0;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px !important;
+  font-weight: bold;
+}
+
+.sidebar .books-btn:hover {
+  background-color: #00265d;
+  color: white !important;
+}
+
+.sidebar .btn-on {
+  background-color: #00265d;
+  color: white !important;
+}
+
+.sidebar .btn-on:hover {
+  color: #00b7b5 !important;
+}
+
+.sidebar .languages {
+  box-sizing: border-box;
+}
+
+.sidebar .languages a {
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.sidebar .languages a span {
+  color: #d7386e;
+  display: block;
+  font-size: 12px;
+}
+
+.level-block {
+  width: 100%;
+  padding: 60px 0;
+  margin: 60px 0;
+  background-color: #faedd9;
+}
+
+.level-block .copy {
+  color: #00265d;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.level-block .copy span {
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.level-block h2 {
+  color: #00265d;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.level-block .inner {
+  background-color: #ffd67a;
+  width: 850px;
+  margin: 0 auto;
+  margin-top: 40px;
+  border: 3px solid #00265d;
+  padding: 20px;
+}
+
+.level-block .inner .box {
+  float: left;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.level-block .inner .language-name {
+  width: 100%;
+  text-align: center;
+  padding: 2px 15px;
+  background-color: #00b7b5;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.level-block .inner .language-level {
+  width: 100%;
+  font-size: 14px;
+  color: #d7386e;
+  text-align: center;
+}
+
+.books-list .book {
+  border: 3px solid #00265d;
+  margin-bottom: 100px;
+  box-sizing: border-box;
+  padding: 30px;
+  position: relative;
+  color: #00b7b5;
+}
+
+.books-list .book .no-books {
+  text-align: center;
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.books-list .book .no-books i {
+  font-size: 40px;
+  margin-right: 20px;
+}
+
+.books-list .book .language-name {
+  font-size: 22px;
+  color: #d7386e;
+  margin-bottom: 5px;
+}
+
+.books-list .book .img {
+  width: 30%;
+  float: left;
+}
+
+.books-list .book .img img {
+  width: 100%;
+}
+
+.books-list .book .img:hover {
+  opacity: 0.6 !important;
+}
+
+.books-list .book .content {
+  float: left;
+  width: 70%;
+  padding-left: 20px;
+  margin-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.books-list .book .content .title {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.books-list .book .content .title a {
+  color: #00b7b5 !important;
+  color: #00265d !important;
+}
+
+.books-list .book .content .title a:hover {
+  opacity: 0.6 !important;
+}
+
+.books-list .book .content .nickname {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.books-list .book .content .nickname span {
+  font-size: 26px;
+}
+
+.signup {
+  width: 40%;
+  border: 1px solid #00b7b5;
+  border-radius: 5px;
+  padding: 30px 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .signup {
+    width: 100%;
+  }
+}
+
+.signup h1 {
+  margin-bottom: 20px;
+}
+
+.signup .messege {
+  color: red;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.signup span {
+  padding-left: 3px;
+  color: red;
+}
+
+.signin {
+  padding: 50px;
+}
+
+.signin .content {
+  margin-top: 0;
+  margin-bottom: 40px;
+  color: #00265d;
+  font-size: 17px;
+  line-height: 2;
+}
+
+.signin .content h1 {
+  text-align: left;
+  font-size: 50px !important;
+  line-height: 1.8;
+}
+
+.signin .login {
+  border: 1px solid #00b7b5;
+  border-radius: 5px;
+  padding: 30px 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .signin .login {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+.signin .login .title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #00265d;
+  margin-bottom: 20px;
+}
+
+.signin .login .messege {
+  color: red;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.signin .login a {
+  display: block;
+  margin-top: 30px;
+  text-align: right;
+  font-size: 14px;
+}
+
+.mypage-sticky {
+  position: absolute;
+  right: 0;
+  top: 90px !important;
+}
+
+.mypage {
+  padding: 30px 30px 50px 30px;
+  border: 3px solid #00b7b5;
+  position: relative;
+}
+
+.mypage .content {
+  margin-top: 0;
+}
+
+.mypage h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #00265d !important;
+}
+
+.mypage .no-data {
+  padding-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.mypage .no-data i {
+  font-size: 34px;
+  margin-right: 10px;
+}
+
+.mypage .link-btn {
+  border: 1px solid #00265d;
+  color: #00265d;
+  padding: 2px 35px;
+  border-radius: 15px;
+}
+
+.mypage .link-btn:hover {
+  background-color: #00265d;
+  color: white !important;
+}
+
+.mypage .detail {
+  margin-bottom: 30px;
+  color: #00265d;
+}
+
+.mypage .detail .img {
+  width: 30%;
+  float: left;
+  margin-bottom: 40px;
+}
+
+.mypage .detail .content {
+  width: 70%;
+  float: left;
+}
+
+.mypage .detail .content .nickname {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.mypage .level {
+  margin-right: -20px;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.mypage .level .level-btn {
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+.mypage .level .box {
+  float: left;
+  width: 25%;
+  box-sizing: border-box;
+  padding-right: 20px;
+  margin-bottom: 15px;
+}
+
+.mypage .level .language-name {
+  text-align: center;
+  padding: 2px 20px;
+  background-color: #00b7b5;
+  color: white;
+}
+
+.mypage .level .language-level {
+  font-size: 22px;
+  color: #d7386e;
+  text-align: center;
+}
+
+.mypage .books {
+  position: relative;
+}
+
+.mypage .books .books-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.mypage .books .title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.mypage .books .block {
+  padding: 15px;
+  border: 1px solid #00265d;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.mypage .books .block .img {
+  float: left;
+  width: 15%;
+}
+
+.mypage .books .block .img img {
+  width: 100px;
+}
+
+.mypage .books .block .img:hover {
+  opacity: 0.6 !important;
+}
+
+.mypage .books .block .content {
+  float: left;
+  width: 80%;
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.mypage .books .block .content a {
+  color: #00265d !important;
+}
+
+.mypage .books .block .content a:hover {
+  opacity: 0.6 !important;
+}
+
+.mypage .books .block .content .language-name {
+  font-size: 22px;
+  color: #d7386e;
+  margin-bottom: 5px;
+}
+
+.mypage .books .block .book-edit-btn {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 12px;
+  border: 1px solid #00265d;
+  border-radius: 15px;
+  padding: 0 10px;
+}
+
+.thumbnail img {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.thumbnail .noimage {
+  background-color: #eee;
+  border-radius: 50%;
+  width: 200px;
+  min-height: 200px;
+  text-align: center;
+  color: #00b7b5;
+  font-size: 30px;
+  font-weight: bold;
+  box-sizing: border-box;
+  padding-top: 34%;
+}
+
+.user-form {
+  width: 60%;
+  margin: 0 auto;
+  padding: 30px 30px 50px 30px;
+  border: 1px solid #00b7b5;
+  border-radius: 5px;
+}
+
+.user-form label {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px !important;
+}
+
+.user-form input,
+.user-form textarea,
+.user-form select {
+  margin-bottom: 40px !important;
+}
+
+.user-form .name {
+  margin-bottom: 20px;
+}
+
+.user-form .name span {
+  padding-left: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.user-form .thumbnail {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.book-form {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px 30px 50px 30px;
+  border: 1px solid #00b7b5;
+  border-radius: 5px;
+}
+
+.book-form label {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.book-form input,
+.book-form textarea,
+.book-form select {
+  margin-bottom: 30px !important;
+}
+
+.btn-color {
+  color: #fff;
+  background-color: #00b7b5;
+  border-color: #00b7b5;
+}
+
+.btn-color:hover {
+  opacity: 0.8;
+}

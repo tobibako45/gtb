@@ -1,0 +1,33 @@
+<div class="contents">
+  <h1>
+    あなたのスキルレベル
+  </h1>
+
+  <div class="user-form">
+    <form action="/user_level" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="_method" value="put">
+      <input type="hidden" name="user_id" value="<%= @user_data[0]['id'] %>">
+      <% languages.each_with_index do |language, num| %>
+      <label>
+        <%= language['name'] %>
+      </label>
+      <select class="form-control mb-2" name="<%= language['name'] %>">
+        <% (0...levels.count).each do |i| %>
+        <%
+          unless @user_language.empty?
+            if @user_language[num]['level'] == i
+              selected = ' selected'
+            end
+          end
+        %>
+        <option value="<%=i%>" <%=selected%>>
+          <%=levels[i]%>
+        </option>
+        <% end %>
+      </select>
+      <% end %>
+      <button type="submit" class="btn mt-4 btn-color">Submit</button>
+    </form>
+  </div>
+
+</div>

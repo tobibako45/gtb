@@ -1,0 +1,735 @@
+html {
+  min-height: 100%;
+  margin-bottom: -80px;
+  position: relative;
+}
+
+body {
+  padding-top: 60px;
+  margin-bottom: 5em;
+  font-family: brandongrotesque-regular, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.01em !important;
+  color: #00b7b5 !important;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+a {
+  color: #00265d !important;
+
+  &:hover {
+    text-decoration: none !important;
+    color: #00b7b5 !important;
+  }
+}
+
+label {
+  margin-bottom: 0 !important;
+}
+
+button {
+  width: 100%;
+}
+
+h1 {
+  font-weight: bold !important;
+  text-align: center;
+  margin-bottom: 40px !important;
+  color: #00265d !important;
+}
+
+// flash
+.flash {
+  font-weight: bold !important;
+  text-align: center;
+  font-size: 22px;
+  position: absolute;
+  left: 10px;
+  top: 75px;
+  z-index: 1031;
+}
+
+.fadeout {
+  animation: fadeOut 5s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+// navbar
+.navbar {
+  padding: 0 !important;
+  padding-left: 20px !important;
+  height: 60px;
+}
+
+.navbar-dark .navbar-brand {
+  color: white !important;
+  font-size: 30px;
+  padding: 0 !important;
+}
+
+// nav
+nav {
+  background-color: #0a275a !important;
+  font-weight: bold;
+  position: relative;
+
+  .login {
+    position: absolute;
+    right: 10px;
+    font-size: 1rem;
+
+    a {
+      color: white !important;
+      font-size: 18px !important;
+      display: block;
+      float: left;
+
+      &:hover {
+        text-decoration: none !important;
+        color: #00b7b5 !important;
+      }
+    }
+
+    .btn {
+      color: white !important;
+      padding: 2px 15px 4px;
+      margin-left: 15px;
+      border: 1px solid white;
+      border-radius: 5px;
+      font-weight: bold;
+
+      &:hover {
+        text-decoration: none !important;
+        color: #00b7b5 !important;
+        background: white;
+      }
+    }
+
+    span {
+      font-size: 22px;
+    }
+
+    .header-thumbnail {
+      margin-right: 10px;
+      float: left;
+
+      img {
+        width: 35px;
+        border-radius: 50%;
+        min-height: 35px;
+        border: 1px solid white;
+      }
+    }
+
+    .nickname {
+      float: left;
+      padding-top: 5px;
+    }
+  }
+}
+
+
+// main
+main {
+  position: relative;
+  margin-bottom: 200px;
+
+  .icons {
+    position: absolute;
+    top: -45px;
+    right: 10px;
+
+    i {
+      margin-left: 15px;
+      color: #00265d;
+    }
+  }
+}
+
+
+// footer
+footer {
+  text-align: center;
+  width: 100%;
+  background-color: #0a275a;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  height: 80px;
+
+  .icons {
+    padding-top: 25px;
+
+    i {
+      margin-right: 30px;
+    }
+  }
+}
+
+
+// contents
+.contents {
+  width: 850px;
+  margin: 60px auto;
+  position: relative;
+}
+
+.contents-heght {
+  min-height: 1300px !important;
+}
+
+// .sticky {
+// position: -webkit-sticky;
+// position: sticky;
+// position: absolute;
+// top: 140px;
+// z-index: 100;
+// }
+
+.sidebar {
+  width: 150px;
+  position: absolute;
+  right: -200px;
+  top: 0;
+  top: 90px;
+
+  // book一覧ボタン
+  .books-btn {
+    display: block;
+    color: #00265d !important;
+    border: 2px solid #00265d;
+    box-sizing: border-box;
+    padding: 5px 0;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px !important;
+    font-weight: bold;
+
+    &:hover {
+      background-color: #00265d;
+      color: white !important;
+    }
+  }
+
+  .btn-on {
+    background-color: #00265d;
+    color: white !important;
+
+    &:hover {
+      color: #00b7b5 !important;
+    }
+  }
+
+  // side 言語一覧
+  .languages {
+    box-sizing: border-box;
+
+    a {
+      font-size: 20px;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 15px;
+
+      span {
+        color: #d7386e;
+        display: block;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+
+// level-block
+.level-block {
+  width: 100%;
+  padding: 60px 0;
+  margin: 60px 0;
+  background-color: #faedd9;
+
+  .copy {
+    color: #00265d;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+
+    span {
+      font-size: 30px;
+      font-weight: normal;
+    }
+  }
+
+  h2 {
+    color: #00265d;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .inner {
+    background-color: #ffd67a;
+    width: 850px;
+    margin: 0 auto;
+    margin-top: 40px;
+    border: 3px solid #00265d;
+    padding: 20px;
+
+    .box {
+      float: left;
+      margin-bottom: 20px;
+      margin-right: 20px;
+    }
+
+    .language-name {
+      width: 100%;
+      text-align: center;
+      padding: 2px 15px;
+      background-color: #00b7b5;
+      color: white;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .language-level {
+      width: 100%;
+      font-size: 14px;
+      color: #d7386e;
+      text-align: center;
+    }
+  }
+}
+
+
+// books-list
+.books-list {
+  .book {
+    border: 3px solid #00265d;
+    margin-bottom: 100px;
+    box-sizing: border-box;
+    padding: 30px;
+    position: relative;
+    color: #00b7b5;
+
+    .no-books {
+      text-align: center;
+      font-size: 34px;
+      font-weight: bold;
+
+      i {
+        font-size: 40px;
+        margin-right: 20px;
+      }
+    }
+
+    .language-name {
+      font-size: 22px;
+      color: #d7386e;
+      margin-bottom: 5px;
+    }
+
+    .img {
+      width: 30%;
+      float: left;
+
+      img {
+        width: 100%;
+      }
+
+      &:hover {
+        opacity: 0.6 !important;
+      }
+    }
+
+    .content {
+      float: left;
+      width: 70%;
+      padding-left: 20px;
+      margin-top: 0;
+      padding-bottom: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+
+      .title {
+        font-size: 34px;
+        font-weight: bold;
+        margin-bottom: 20px;
+
+        a {
+          color: #00b7b5 !important;
+          color: #00265d !important;
+
+          &:hover {
+            opacity: 0.6 !important;
+          }
+        }
+      }
+
+      .nickname {
+        font-weight: bold;
+        margin-bottom: 10px;
+
+        span {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}
+
+// signup
+.signup {
+  width: 40%;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .messege {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  span {
+    padding-left: 3px;
+    color: red;
+  }
+
+  border: 1px solid #00b7b5;
+  border-radius: 5px;
+  padding: 30px 20px;
+}
+
+// signin
+.signin {
+  padding: 50px;
+
+  .content {
+    margin-top: 0;
+    margin-bottom: 40px;
+    color: #00265d;
+    font-size: 17px;
+    line-height: 2;
+
+    h1 {
+      text-align: left;
+      font-size: 50px !important;
+      line-height: 1.8;
+    }
+  }
+
+  .login {
+    border: 1px solid #00b7b5;
+    border-radius: 5px;
+    padding: 30px 20px;
+
+    @media screen and (max-width: 768px) {
+      width: 95%;
+      margin: 0 auto;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-align: center;
+      color: #00265d;
+      margin-bottom: 20px;
+    }
+
+    .messege {
+      color: red;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    a {
+      display: block;
+      margin-top: 30px;
+      text-align: right;
+      font-size: 14px;
+    }
+  }
+}
+
+// mypage
+.mypage-sticky {
+  position: absolute;
+  right: 0;
+  top: 90px !important;
+}
+
+.mypage {
+  padding: 30px 30px 50px 30px;
+  border: 3px solid #00b7b5;
+  position: relative;
+
+  .content {
+    margin-top: 0;
+  }
+
+  h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #00265d !important;
+  }
+
+  .no-data {
+    padding-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+
+    i {
+      font-size: 34px;
+      margin-right: 10px;
+    }
+  }
+
+  .link-btn {
+    border: 1px solid #00265d;
+    color: #00265d;
+    padding: 2px 35px;
+    border-radius: 15px;
+
+    &:hover {
+      background-color: #00265d;
+      color: white !important;
+    }
+  }
+
+  .detail {
+    margin-bottom: 30px;
+    color: #00265d;
+
+    .img {
+      width: 30%;
+      float: left;
+      margin-bottom: 40px;
+    }
+
+    .content {
+      width: 70%;
+      float: left;
+
+      .nickname {
+        font-size: 35px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .level {
+    margin-right: -20px;
+    margin-bottom: 80px;
+    position: relative;
+
+    .level-btn {
+      position: absolute;
+      top: 0;
+      right: 20px;
+    }
+
+    .box {
+      float: left;
+      width: 25%;
+      box-sizing: border-box;
+      padding-right: 20px;
+      margin-bottom: 15px;
+    }
+
+    .language-name {
+      text-align: center;
+      padding: 2px 20px;
+      background-color: #00b7b5;
+      color: white;
+    }
+
+    .language-level {
+      font-size: 22px;
+      color: #d7386e;
+      text-align: center;
+    }
+  }
+
+  .books {
+    position: relative;
+
+    .books-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .block {
+      padding: 15px;
+      border: 1px solid #00265d;
+      margin-bottom: 30px;
+      position: relative;
+
+      .img {
+        float: left;
+        width: 15%;
+
+        img {
+          width: 100px;
+        }
+
+        &:hover {
+          opacity: 0.6 !important;
+        }
+      }
+
+      .content {
+        float: left;
+        width: 80%;
+        font-size: 34px;
+        font-weight: bold;
+        margin-bottom: 20px;
+
+        a {
+          color: #00265d !important;
+
+          &:hover {
+            opacity: 0.6 !important;
+          }
+        }
+
+        .language-name {
+          font-size: 22px;
+          color: #d7386e;
+          margin-bottom: 5px;
+        }
+      }
+
+      .book-edit-btn {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        font-size: 12px;
+        border: 1px solid #00265d;
+        border-radius: 15px;
+        padding: 0 10px;
+      }
+    }
+  }
+}
+
+.thumbnail {
+  img {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+
+  .noimage {
+    background-color: #eee;
+    border-radius: 50%;
+    width: 200px;
+    min-height: 200px;
+    text-align: center;
+    color: #00b7b5;
+    font-size: 30px;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding-top: 34%;
+  }
+}
+
+// form
+.user-form {
+  width: 60%;
+  margin: 0 auto;
+  padding: 30px 30px 50px 30px;
+  border: 1px solid #00b7b5;
+  border-radius: 5px;
+
+  label {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px !important;
+  }
+
+  input,
+  textarea,
+  select {
+    margin-bottom: 40px !important;
+  }
+
+  .name {
+    margin-bottom: 20px;
+
+    span {
+      padding-left: 20px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+
+  .thumbnail {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
+.book-form {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px 30px 50px 30px;
+  border: 1px solid #00b7b5;
+  border-radius: 5px;
+
+  label {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  input,
+  textarea,
+  select {
+    margin-bottom: 30px !important;
+  }
+}
+
+.btn-color {
+  color: #fff;
+  background-color: #00b7b5;
+  border-color: #00b7b5;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

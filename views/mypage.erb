@@ -1,0 +1,96 @@
+<div class="contents">
+
+  <div class="sidebar">
+    <a href="/books" class="books-btn">All Books</a>
+    <a href="/" class="books-btn">あなたにおすすめ</a>
+  </div>
+
+  <h1>My Page</h1>
+  <div class="mypage">
+
+    <div class="detail clearfix">
+      <div class="img">
+        <div class="thumbnail mb-4">
+          <% if @user_data[0]['image'] %>
+          <img src="/image/users/<%= @user_data[0]['id'] %>/<%= @user_data[0]['image'] %>" alt="thumbnail" />
+          <% else %>
+          <div class="noimage">NoImage</div>
+          <% end %>
+        </div>
+
+        <a href="/user/<%= @user_data[0]['id'] %>/edit" class="link-btn">プロフィール編集</a>
+      </div>
+
+      <div class="content">
+        <div class="nickname">
+          <%= @user_data[0]['nickname'] %>
+        </div>
+        <div class="comment">
+          <%= nl2br(@user_data[0]['comment']) %>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="level clearfix">
+      <h2>あなたのスキルレベル</h2>
+      <a href="/user/<%= @user_data[0]['id'] %>/level" class="level-btn link-btn">スキルレベル設定</a>
+
+      <% if @user_language.empty? %>
+      <div class="no-data">
+        <i class="far fa-dizzy"></i>まだありません
+      </div>
+      <% else %>
+      <% languages.each_with_index do |language, num| %>
+      <div class="box">
+        <div class="language-name">
+          <%=language_name(@user_language[num]['language_id'])%>
+        </div>
+        <div class="language-level">
+          <%=levels[@user_language[num]['level']]%>
+        </div>
+      </div>
+      <% end %>
+      <% end %>
+    </div>
+
+    <div class="books">
+      <h2>あなたの紹介した本</h2>
+
+      <a href="/book/<%= @user_data[0]['id'] %>/create" class="books-btn link-btn">本を紹介する</a>
+
+      <% if @books.empty? %>
+      <div class="no-data">
+        <i class="far fa-dizzy"></i>まだありません
+      </div>
+      <% end %>
+
+      <% @books.each do |book| %>
+      <div class="block clearfix">
+
+        <div class="img">
+          <a href="/book/<%= book['id'] %>/edit">
+            <img src="/image/books/<%= book['id'] %>/<%= book['image'] %>" alt="" />
+          </a>
+        </div>
+
+        <div class="content">
+          <div class="language-name">
+            <%= language_name(book['language_id']) %>
+            <%= levels[book['level']] %>
+          </div>
+          <div class="title">
+            <a href="/book/<%= book['id'] %>/edit">
+              <%= book['title'] %>
+            </a>
+          </div>
+        </div>
+
+        <a href="<%= book['link'] %>" class="book-edit-btn" target="_blank">Link</a>
+
+      </div>
+
+      <% end %>
+    </div>
+  </div>
+</div>
