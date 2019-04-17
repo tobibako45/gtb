@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'mysql2'
 require 'mysql2-cs-bind'
+require 'rb-readline'
 require 'pry'
 require 'rack/flash'
 
