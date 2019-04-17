@@ -1,2 +1,4 @@
 .idea/
 photo_test/
+public/image/books/*
+public/image/users/*
